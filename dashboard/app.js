@@ -28,6 +28,13 @@ closeBtn.addEventListener('click', () => {
     sidePanel.classList.remove('open');
 });
 
+// 데이터 출처 토글 이벤트
+const sourceToggle = document.getElementById('source-toggle');
+const sourcePanel = document.getElementById('source-panel');
+sourceToggle.addEventListener('click', () => {
+    sourcePanel.classList.toggle('open');
+});
+
 // 마커 아이콘 생성 함수
 function createMarkerIcon(color) {
     return L.divIcon({

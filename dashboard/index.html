@@ -15,6 +15,48 @@
         <!-- 맵 컨테이너 -->
         <div id="map"></div>
 
+        <!-- 범례 (Legend) -->
+        <div id="legend" class="legend-panel">
+            <div class="legend-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                화재 취약성 등급 (VAM)
+            </div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <span class="legend-dot" style="background:#10b981;"></span>
+                    <span class="legend-label">안전 <span class="legend-score">80점 이상</span></span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background:#f59e0b;"></span>
+                    <span class="legend-label">보통 <span class="legend-score">60~79점</span></span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background:#ef4444;"></span>
+                    <span class="legend-label">위험 <span class="legend-score">60점 미만</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 데이터 출처 (Data Source) -->
+        <div id="source-panel" class="source-panel">
+            <button id="source-toggle" class="source-toggle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                데이터 출처
+                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+            </button>
+            <div id="source-content" class="source-content">
+                <ul>
+                    <li><strong>시설 데이터</strong>: 보건복지부 장기요양기관 공개 데이터</li>
+                    <li><strong>건축물 데이터</strong>: 국토교통부 건축데이터 민간개방 시스템(ArchHUB)</li>
+                    <li><strong>소방서 위치</strong>: V-World 국가공간정보포털 (8,707개 119안전센터)</li>
+                    <li><strong>배경지도</strong>: V-World 오픈API 2D 배경지도</li>
+                </ul>
+                <div class="source-note">
+                    ※ VAM(취약성 평가 모델) 점수는 건축 노후도, 도로 접근성, 소방서 거리, 인력 비율 등을 종합 평가하여 산출됩니다. 자세한 산출 방법론은 프로젝트 문서를 참조하세요.
+                </div>
+            </div>
+        </div>
+
         <!-- 슬라이드 패널 -->
         <div id="side-panel" class="side-panel">
             <div class="panel-header">
